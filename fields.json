@@ -1,0 +1,98 @@
+[
+  {
+    "key": "input_format",
+    "type": "select",
+    "options": [
+      "text",
+      "json"
+    ],
+    "label": [
+      "Content format",
+      "Format du contenu"
+    ],
+    "help": "JSON is parsed strictly and keeps structure. Text is never automatically interpreted as JSON."
+  },
+  {
+    "key": "action",
+    "type": "select",
+    "options": [
+      "mask",
+      "remove",
+      "pseudonymize"
+    ],
+    "label": [
+      "Replacement action",
+      "Action de remplacement"
+    ],
+    "help": "Mask uses a fixed marker. Remove omits selected JSON fields. Pseudonyms require a wallet key."
+  },
+  {
+    "key": "fields",
+    "type": "json",
+    "rows": 3,
+    "label": [
+      "JSON field names",
+      "Noms de champs JSON"
+    ],
+    "help": "Case-insensitive exact names at any depth. This does not detect every kind of private data."
+  },
+  {
+    "key": "emails",
+    "type": "boolean",
+    "label": [
+      "Mask recognizable email addresses",
+      "Masquer les adresses email reconnues"
+    ],
+    "help": "Bounded ASCII email pattern, not universal address or personal-data detection."
+  },
+  {
+    "key": "mask",
+    "label": [
+      "Mask text",
+      "Texte de masquage"
+    ],
+    "help": "Literal replacement marker, never a secret."
+  },
+  {
+    "key": "secret_ref",
+    "label": [
+      "Pseudonym key reference",
+      "Référence de clé des pseudonymes"
+    ],
+    "help": "Wallet reference only, required for pseudonymize. The key is never included in the output or report."
+  },
+  {
+    "key": "literals",
+    "type": "json",
+    "rows": 3,
+    "advanced": true,
+    "label": [
+      "Exact text to mask",
+      "Textes exacts à masquer"
+    ],
+    "help": "Up to 32 literal strings, no regex. Do not store credentials here; select credential fields instead."
+  },
+  {
+    "key": "max_bytes",
+    "type": "integer",
+    "min": 1024,
+    "max": 2097152,
+    "label": [
+      "Input size limit (bytes)",
+      "Limite de taille (octets)"
+    ],
+    "help": "Reject an oversized document before processing; no partial result."
+  },
+  {
+    "key": "max_matches",
+    "type": "integer",
+    "min": 1,
+    "max": 50000,
+    "advanced": true,
+    "label": [
+      "Maximum replacements",
+      "Nombre maximal de remplacements"
+    ],
+    "help": "Bound matching work across the whole document. Exceeding the limit fails without emitting original data."
+  }
+]

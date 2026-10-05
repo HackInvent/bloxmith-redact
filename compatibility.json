@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "kind": "redact",
+  "block_version": "0.1.0",
+  "maintained_by": "HackInvent",
+  "source": {
+    "algorithm": "block-source-v1",
+    "sha256": "d8ec5a01c76b5f0e0604d4e527e370ddfcadb8529d4736829c314afd78632610"
+  },
+  "bloxsmith_compatibility": [
+    "1.0.9"
+  ],
+  "tested_with_bloxsmith": "1.0.9",
+  "validations": [
+    {
+      "bloxsmith_version": "1.0.9",
+      "framework_commit": "f1a87f6369d2acfb8be41d23ea849384cd461c86",
+      "framework_source_sha256": "66e36a13fd9a23a0a0576ec81552d6e479671db6db9b8692cc7486c5aac4f3b8",
+      "tested_at": "2026-10-04T14:41:37.684086+00:00",
+      "status": "passed",
+      "installation_mode": "bundled",
+      "suite_paths": [
+        "tests/F5.01_redact.py",
+        "tests/F5.02_redact_runtime.py",
+        "tests/F8.01_redact_ui.py"
+      ],
+      "suite_count": 3,
+      "report_sha256": "c78aabfc6d1a39cfafa2259db8bf883492d9138dbfc01a2745d335ae08c9c49c"
+    }
+  ]
+}
